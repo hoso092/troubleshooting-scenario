@@ -3,15 +3,23 @@ This guide explains common reasons why an internal service like internal.example
 # 📚 Common DNS Issues and Solutions
 #### 1. DNS Server is Unreachable
 How to Confirm:
+
 `$ dig internal.example.com`
+
 If the DNS server is unreachable, you will see:
+
 `;; connection timed out; no servers could be reached`
 Solution:
+
 `sudo systemctl restart systemd-resolved`
+
 #### 2.  DNS Record Missing or Incorrect
 How to Confirm:
+
 `$ dig internal.example.com`
+
 If the DNS record is missing or incorrect, you will see:
+
 `;; connection timed out; no servers could be reached`
 Solution:
 `sudo systemctl restart systemd-resolved`
